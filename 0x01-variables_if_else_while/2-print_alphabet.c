@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - print alphapet 
+ * main - print alphapet
  * Return: 0
  */
 
 int main(void)
 {
 int count = 'a';
-while (count <='z' && count >='a')
+while (count <= 'z' && count >= 'a')
 {
 putchar(count);
 count += 1;
