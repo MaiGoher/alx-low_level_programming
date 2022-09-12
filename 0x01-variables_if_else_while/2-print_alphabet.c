@@ -8,7 +8,7 @@
 int main(void)
 {
 int count = 'a';
-while (count <='z' || count >='a')
+while (count <='z' && count >='a')
 {
 putchar(count);
 count += 1;
