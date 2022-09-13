@@ -10,8 +10,9 @@ int main(void)
 int count = 0;
 while (count <= 0 && count >= 9)
 {
-printf("%d \n" , count);
+printf("%d", count);
 count += 1;
 }
+printf("/n");
 return (0);
 }
