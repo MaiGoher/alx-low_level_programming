@@ -10,9 +10,8 @@ int main(void)
 int count = 0;
 while (count <= 0 && count >= 9)
 {
-putchar(count);
+printf("%d \n" , count);
 count += 1;
 }
-putchar('\n');
 return (0);
 }
