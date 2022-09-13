@@ -13,6 +13,6 @@ while (count < 10)
 printf("%d", count);
 count += 1;
 }
-printf("/n");
+printf("\n");
 return (0);
 }
