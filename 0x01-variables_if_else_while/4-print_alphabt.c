@@ -8,9 +8,9 @@
 int main(void)
 {
 int count = 'a';
-while (count <= 'z' &&  count >= 'a' && count != 'q' && count != 'e')
+while (count <= 'z' &&  count >= 'a')
 {
-putchar(count);
+if(count != 'q' && count != 'e') putchar(count);
 count += 1;
 }
 putchar('\n');
