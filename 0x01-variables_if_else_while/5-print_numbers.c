@@ -8,7 +8,7 @@
 int main(void)
 {
 int count = 0;
-while (count <= 0 && count >= 9)
+while (count < 10)
 {
 printf("%d", count);
 count += 1;
