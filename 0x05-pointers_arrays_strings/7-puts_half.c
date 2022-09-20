@@ -30,7 +30,7 @@ void puts_half(char *str)
 
 	while (*(str + j) != '\0')
 	{
-		printf("%c" ,*(str + j));
+		printf("%c", *(str + j));
 		j++;
 	}
 	putchar('\n');
