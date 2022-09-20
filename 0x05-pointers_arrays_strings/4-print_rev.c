@@ -9,17 +9,19 @@
  */
 void print_rev(char *s)
 {
-	int fcounter = 0;
-	int i, n;
+	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = 0;
+
+	while (*(s + i) != '\0')
 	{
-		fcounter++;
+		i++;
 	}
-
-	for (n = (fcounter - 1); n >= 0; n--)
+	i = i - 1;
+	while (i >= 0)
 	{
-		printf("%c" , s[n]);
+		_putchar(*(s + i));
+		i--;
 	}
 	_putchar('\n');
 }
