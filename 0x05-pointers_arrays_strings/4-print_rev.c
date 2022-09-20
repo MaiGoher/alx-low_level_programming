@@ -10,6 +10,7 @@ void print_rev(char *s)
 {
 	int fcounter = 0;
 	int i, n;
+    char m;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -18,7 +19,8 @@ void print_rev(char *s)
 
 	for (n = (fcounter - 1); n >= 0; n--)
 	{
-		_putchar(s[n]);
+        m = s[n] ;
+		_putchar(m);
 	}
 	_putchar('\n');
 }
