@@ -9,10 +9,11 @@
  */
 void _puts(char *str)
 {
-	while (*str != '\0')
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		printf("%d" , *str);
-		str++;
+		putchar(str[i]);
 	}
 	putchar('\n');
 }
