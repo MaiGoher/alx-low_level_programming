@@ -1,19 +1,40 @@
-#include "main.h"
-#include <stdio.h>
-
-
 /**
- * _puts - a function that prints a string
- * @str: string input
- * Return: string
+ * _printf - is a function that selects the correct function to print.
+ * @format: identifier to look for.
+ * Return: the length of the string.
  */
-void _puts(char *str)
+int _printf(const char * const format, ...)
 {
-	int i;
+	convert_match m[] = {
+		{"%s", ptintf_string}, {"%c", printf_char},
+		{"%%", printf_precentage}
+	};
 
-	for (i = 0; str[i] != '\0'; i++)
+	va_list args;
+	int i = 0, j, len = 0;
+
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
+Here:
+	while (format[i] != '\0')
 	{
-		putchar(str[i]);
+		j = 2;
+		while (j >= 0)
+		{
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			{
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
+			}
+			j--;
+		}
+		_putchar(format[i]);
+		len++;
+		i++;
 	}
-	putchar('\n');
+	va_end(args);
+	return (len);
 }
